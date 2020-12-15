@@ -269,7 +269,7 @@ int gb28181_make_pes_header(char* pData, int stream_id, int payload_len, unsigne
 
 
 
-    bits_write(&bitsBuffer, 4, 3);                    /*'0011'*/
+    bits_write(&bitsBuffer, 4, 2);                    /*'0010'*/
     bits_write(&bitsBuffer, 3, ((pts) >> 30) & 0x07);     /*PTS[32..30]*/
     bits_write(&bitsBuffer, 1, 1);
     bits_write(&bitsBuffer, 15, ((pts) >> 15) & 0x7FFF);    /*PTS[29..15]*/
